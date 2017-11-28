@@ -10,5 +10,5 @@ package notes;
  * @author ArthurJCQ
  */
 public class Controller {
-    
+    String bite = "salut";
 }

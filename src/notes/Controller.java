@@ -7,7 +7,7 @@ package notes;
 
 /**
  *
- * @author ArthurJCQ & Bla
+ * @author ArthurJCQ
  */
 public class Controller {
 }

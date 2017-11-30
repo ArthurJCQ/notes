@@ -7,7 +7,7 @@ package notes;
 
 /**
  *
- * @author ArthurJCQ
+ * @author ArthurJCQ & Armand Begue
  */
 public class Model {
     

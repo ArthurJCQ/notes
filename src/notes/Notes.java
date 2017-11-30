@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author ArthurJCQ & Armand BEGUE & Bla & Co
+ * @author ArthurJCQ & Armand BEGUE & Bla & Connard
  */
 public class Notes extends Application {
 

@@ -8,10 +8,19 @@
 
 }
 
-#pp_milieu{
+#pp_haut{
     -fx-background-image: url("fond_accueil.jpg");
 }
 
+#titre{    
+    -fx-text-fill: white;
+}
+
+#soustitre{    
+    -fx-text-fill: white;
+}
+
 #pp_connexion{
-    -fx-text-fill: rgba(255,0,0,0);
+    -fx-background-color: #f6e397;
+    -fx-background-radius: 15;  
 }

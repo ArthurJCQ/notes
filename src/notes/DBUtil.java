@@ -33,7 +33,7 @@ public class DBUtil {
 			// requete de test
 			/*Statement statement = conn.createStatement();
 			 * ResultSet resultSet = statement.executeQuery(
-			 * "SELECT LAST_NAME FROM employees"); while (resultSet.next()) {
+			 * "SELECT libelle FROM cours"); while (resultSet.next()) {
 			 * System.out.println("NAME:" + resultSet.getString("LAST_NAME")); }
 			 */
 		} catch (SQLException e) {

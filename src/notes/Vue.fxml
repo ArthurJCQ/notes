@@ -6,12 +6,30 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notes.Controller">
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notes.Controller">
     <stylesheets>
         <URL value="@vue.css"/>
     </stylesheets>
     <children>
-        <Label text="NomDuSite" />
+        <VBox fx:id="vboxPagePrincipale" alignment="CENTER">
+            <children>
+                <Label layoutX="650" layoutY="50" text="Notes !" >
+                    <font>
+                        <Font name="System Bold" size="75.0" />
+                    </font>
+                </Label>
+                <Label layoutX="320" layoutY="150" text="Interface d'aide à la prise de notes en cours" >
+                    <font>
+                        <Font size="50.0" />
+                    </font>
+                </Label>
+                <Separator layoutY="250.0" prefHeight="4.0" prefWidth="1600.0" />
+            </children>
+        </VBox>
+         
+         
     </children>
 </AnchorPane>

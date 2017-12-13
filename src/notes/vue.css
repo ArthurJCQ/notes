@@ -3,5 +3,9 @@
  */
 
 .mainFxmlClass {
+    
+    #vboxPagePrincipale {
+        background-color: blue;
+    }
 
 }

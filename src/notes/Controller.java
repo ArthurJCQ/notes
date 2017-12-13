@@ -7,11 +7,10 @@ package notes;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import static javafx.application.ConditionalFeature.FXML;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javax.swing.JLabel;
+import javafx.scene.layout.VBox;
+
 
 /**
  * FXML Controller class
@@ -21,7 +20,7 @@ import javax.swing.JLabel;
 public class Controller implements Initializable {
 
     @FXML
-    private JLabel titre = new JLabel("NomDuSite", JLabel.CENTER);
+    private VBox vboxPagePrincipale = new VBox();
     /**
      * Initializes the controller class.
      */

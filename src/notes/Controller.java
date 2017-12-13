@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 
@@ -20,13 +21,34 @@ import javafx.scene.layout.VBox;
 public class Controller implements Initializable {
 
     @FXML
-    private VBox vboxPagePrincipale = new VBox();
+    private VBox pp_haut = new VBox();
+    
+    @FXML
+    private VBox pp_milieu = new VBox();
+    
+    @FXML
+    private VBox pp_bas = new VBox();
+    
+    @FXML
+    private VBox pp_connexion = new VBox();
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        //pp_haut.setStyle("-fx-background-color: #e4ca82;");
+        pp_haut.setPrefHeight(875);
+        pp_haut.setPrefWidth(1600);
+        pp_milieu.setPrefHeight(675);
+        pp_milieu.setPrefWidth(1600);
+        pp_bas.setStyle("-fx-background-color: #cccccc;");
+        pp_bas.setPrefHeight(25);
+        pp_bas.setPrefWidth(1600);
+        pp_connexion.setStyle("-fx-border-color: black;-fx-border-width: 2;-fx-border-radius: 15;");
+        pp_connexion.setMaxSize(300.0, 300.0);
+        pp_connexion.setMinSize(300.0, 300.0);
+        
     }    
     
 }

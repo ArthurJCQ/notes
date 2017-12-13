@@ -4,8 +4,23 @@
 
 .mainFxmlClass {
     
-    #vboxPagePrincipale {
-        background-color: blue;
-    }
+    
 
+}
+
+#pp_haut{
+    -fx-background-image: url("fond_accueil.jpg");
+}
+
+#titre{    
+    -fx-text-fill: white;
+}
+
+#soustitre{    
+    -fx-text-fill: white;
+}
+
+#pp_connexion{
+    -fx-background-color: #f6e397;
+    -fx-background-radius: 15;  
 }

@@ -14,19 +14,47 @@
         <URL value="@vue.css"/>
     </stylesheets>
     <children>
-        <VBox fx:id="vboxPagePrincipale" alignment="CENTER">
+        <VBox fx:id="pp_haut" alignment="CENTER">
             <children>
-                <Label layoutX="650" layoutY="50" text="Notes !" >
+                <Label fx:id="titre" layoutY="50" text="Notes !" >
                     <font>
                         <Font name="System Bold" size="75.0" />
                     </font>
                 </Label>
-                <Label layoutX="320" layoutY="150" text="Interface d'aide à la prise de notes en cours" >
+                <Label fx:id="soustitre" layoutY="150" text="Interface d'aide à la prise de notes en cours" >
                     <font>
                         <Font size="50.0" />
                     </font>
                 </Label>
-                <Separator layoutY="250.0" prefHeight="4.0" prefWidth="1600.0" />
+                <VBox fx:id="pp_milieu" layoutY="200" alignment="CENTER">
+                    <children>
+                        <VBox fx:id="pp_connexion" layoutY="200" alignment="CENTER" spacing="10.0">
+                            <Label layoutY="50" text="Connexion" >
+                                <font>
+                                    <Font size="25" />
+                                </font>
+                            </Label>
+                            <TextField minWidth="200" maxWidth="200" promptText="N° Etudiant"/>
+                            <TextField minWidth="200" maxWidth="200" promptText="Mot de passe"/>
+                            <CheckBox> Rester connecté </CheckBox>
+                            <Button> Connexion </Button>
+                            <Label fx:id="mdpoublie" layoutY="50" text="Mot de passe oublié ?" >
+                                <font>
+                                    <Font size="15" />
+                                </font>
+                            </Label>
+                        </VBox>          
+                    </children>
+                </VBox>          
+            </children>
+        </VBox>
+        <VBox fx:id="pp_bas" layoutY="875" alignment="CENTER">
+            <children>
+                <Label layoutY="50" text="Mentions légales" >
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>            
             </children>
         </VBox>
          

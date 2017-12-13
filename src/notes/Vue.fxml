@@ -11,4 +11,7 @@
     <stylesheets>
         <URL value="@vue.css"/>
     </stylesheets>
+    <children>
+        <Label text="NomDuSite" />
+    </children>
 </AnchorPane>

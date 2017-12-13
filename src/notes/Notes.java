@@ -5,14 +5,10 @@
  */
 package notes;
 
-import com.sun.javaws.Main;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
@@ -22,14 +18,15 @@ import javafx.stage.Stage;
 public class Notes extends Application {
 
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws Exception {
 
-        StackPane root = new StackPane();
+        //StackPane root = new StackPane();
 
-        Scene scene = new Scene(root, 1000, 650);
-
+        //Scene scene = new Scene(root, 1000, 650);
+        
+        Parent root = FXMLLoader.load(getClass().getResource("Vue.fxml"));
         primaryStage.setTitle("Notes !");
-        primaryStage.setScene(scene);
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 

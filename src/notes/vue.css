@@ -4,8 +4,14 @@
 
 .mainFxmlClass {
     
-    #vboxPagePrincipale {
-        background-color: blue;
-    }
+    
 
+}
+
+#pp_milieu{
+    -fx-background-image: url("fond_accueil.jpg");
+}
+
+#pp_connexion{
+    -fx-text-fill: rgba(255,0,0,0);
 }

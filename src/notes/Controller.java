@@ -37,7 +37,6 @@ public class Controller implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //pp_haut.setStyle("-fx-background-color: #e4ca82;");
         pp_haut.setPrefHeight(875);
         pp_haut.setPrefWidth(1600);
         pp_milieu.setPrefHeight(675);

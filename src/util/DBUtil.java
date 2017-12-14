@@ -6,11 +6,7 @@
 package util;
 
 import com.sun.rowset.CachedRowSetImpl;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  *
@@ -31,14 +27,14 @@ public class DBUtil {
 		try {
 			conn = DriverManager.getConnection(connStr);
 			// requete de test
-			Statement statement = conn.createStatement();
+			/*Statement statement = conn.createStatement();
 			 ResultSet resultSet = statement.executeQuery(
 			 "SELECT libelle FROM cours"); while (resultSet.next()) {
                              //To Do Tomorrow
 			 System.out.println("Libelle :" + resultSet.getString("libelle")); }
-			 
+			 */
 		} catch (SQLException e) {
-			System.out.println("Connection Failed! Check output console" + e);
+			System.out.println("Connection Failed! Check output console : " + e);
 			e.printStackTrace();
 			throw e;
 		}

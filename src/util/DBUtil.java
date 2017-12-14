@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package notes;
+package util;
 
 import com.sun.rowset.CachedRowSetImpl;
 import java.sql.Connection;
@@ -31,11 +31,12 @@ public class DBUtil {
 		try {
 			conn = DriverManager.getConnection(connStr);
 			// requete de test
-			/*Statement statement = conn.createStatement();
-			 * ResultSet resultSet = statement.executeQuery(
-			 * "SELECT libelle FROM cours"); while (resultSet.next()) {
-			 * System.out.println("NAME:" + resultSet.getString("LAST_NAME")); }
-			 */
+			Statement statement = conn.createStatement();
+			 ResultSet resultSet = statement.executeQuery(
+			 "SELECT libelle FROM cours"); while (resultSet.next()) {
+                             //To Do Tomorrow
+			 System.out.println("Libelle :" + resultSet.getString("libelle")); }
+			 
 		} catch (SQLException e) {
 			System.out.println("Connection Failed! Check output console" + e);
 			e.printStackTrace();

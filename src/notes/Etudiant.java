@@ -27,15 +27,15 @@ public class Etudiant {
     }
 
     //employee_id
-    public int getEmployeeId() {
+    public int getEtudiantId() {
         return etudiant_id.get();
     }
 
-    public void setEmployeeId(int etudiantId){
+    public void setEtudiantId(int etudiantId){
         this.etudiant_id.set(etudiantId);
     }
 
-    public IntegerProperty employeeIdProperty(){
+    public IntegerProperty EtudiantIdProperty(){
         return etudiant_id;
     }
 

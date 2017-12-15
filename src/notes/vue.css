@@ -23,6 +23,26 @@
     -fx-background-radius: 15;  
 }
 
+#boutonconnexion{
+    -fx-background-radius: 10;
+}
+
 #AnchorPane2{
-    -fx-background-image: url("fond_accueil.jpg");
+    -fx-background-image: url("fond_2.jpg");
+}
+
+#matiere{    
+    -fx-padding-top: 500px;
+}
+
+#listematieres{
+    -fx-background-radius: 10;
+}
+
+#listeseances{
+    -fx-background-radius: 10;    
+}
+
+#boutonacces{
+    -fx-background-radius: 10;
 }

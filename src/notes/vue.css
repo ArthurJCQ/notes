@@ -20,5 +20,9 @@
 
 #pp_connexion{
     -fx-background-color: #f6e397;
-    -fx-background-radius: 10;  
+    -fx-background-radius: 15;  
+}
+
+#AnchorPane2{
+    -fx-background-image: url("fond_accueil.jpg");
 }

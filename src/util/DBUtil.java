@@ -30,7 +30,6 @@ public class DBUtil {
 			/*Statement statement = conn.createStatement();
 			 ResultSet resultSet = statement.executeQuery(
 			 "SELECT libelle FROM cours"); while (resultSet.next()) {
-                             //To Do Tomorrow
 			 System.out.println("Libelle :" + resultSet.getString("libelle")); }
 			 */
 		} catch (SQLException e) {

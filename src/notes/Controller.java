@@ -12,10 +12,11 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.fxml.JavaFXBuilderFactory;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -25,6 +26,13 @@ import javafx.stage.Stage;
  * @author ArthurJCQ
  */
 public class Controller implements Initializable {
+
+    @FXML
+    private TextField nom;
+    @FXML
+    private TextField mdp;
+    @FXML
+    private Alert alert;
 
     @FXML
     private VBox pp_haut = new VBox(), pp_milieu = new VBox(), pp_connexion = new VBox(), pp_bas = new VBox();
@@ -43,8 +51,18 @@ public class Controller implements Initializable {
         pp_connexion.setMinSize(300.0, 300.0);
     }
 
+    @FXML
     public void goToMenu(ActionEvent actionevent) throws Exception {
-        changeScene(actionevent);
+        if (Model.tryLogin(nom.getText(), mdp.getText())) {
+            changeScene(actionevent);
+        } else {
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Erreur");
+            alert.setHeaderText(null);
+            alert.setContentText("Mauvais paramètres de connexion");
+
+            alert.showAndWait();
+        }
     }
 
     @FXML

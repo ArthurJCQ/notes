@@ -34,8 +34,8 @@
                                     <Font size="25" />
                                 </font>
                             </Label>
-                            <TextField minWidth="200" maxWidth="200" promptText="N° Etudiant"/>
-                            <TextField minWidth="200" maxWidth="200" promptText="Mot de passe"/>
+                            <TextField fx:id="nom" minWidth="200" maxWidth="200" promptText="nom"/>
+                            <TextField fx:id="mdp" minWidth="200" maxWidth="200" promptText="Mot de passe"/>
                             <CheckBox> Rester connecté </CheckBox>
                             <Button fx:id="boutonconnexion" onAction="#goToMenu"> Connexion </Button>
                             <Label fx:id="mdpoublie" layoutY="50" text="Mot de passe oublié ?" >

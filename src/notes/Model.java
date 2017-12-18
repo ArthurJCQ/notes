@@ -56,12 +56,16 @@ public class Model {
         try {
             //Get ResultSet from dbExecuteQuery method
             ResultSet rsEtu = DBUtil.dbExecuteQuery(selectStmt);
-
+            
+            if(rsEtu.next()){
+                return true;
+            }else{
+                return false;
+            }
             //Send ResultSet to the getEmployeeFromResultSet method and get employee object
             //String prenom = getPrenom(rsEtu);
 
             //Return employee object
-            return true;
         } catch (SQLException e) {
             
             System.out.println("Erreur : " + e);

@@ -46,3 +46,23 @@
 #boutonacces{
     -fx-background-radius: 10;
 }
+
+#AnchorPane3{
+    -fx-background-image: url("fond_accueil.jpg");
+}
+
+#note1{
+    -fx-background-color: #ffffb7;
+    -fx-background-radius: 15;
+}
+
+#note2{
+    -fx-background-color: #ffffb7;
+    -fx-background-radius: 15;
+}
+
+#listenotes{
+    -fx-border-color: black;-fx-border-width: 2;-fx-border-radius: 15;
+    -fx-background-color: ffffff;
+    -fx-background-radius: 15;
+}

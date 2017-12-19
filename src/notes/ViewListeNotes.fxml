@@ -4,11 +4,65 @@
 <?import java.net.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notes.ControllerListeNotes">
+<AnchorPane id="AnchorPane3" prefHeight="900.0" prefWidth="1600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notes.ControllerListeNotes">
     <stylesheets>
         <URL value="@vue.css"/>
     </stylesheets>
+    <children>
+        <VBox alignment="CENTER">
+            <children>
+                <Label fx:id="titre" layoutY="50" text="Notes !" >
+                    <font>
+                        <Font name="System Bold" size="75.0" />
+                    </font>
+                </Label>
+                <Label fx:id="soustitre" layoutY="150" text="Interface d'aide à la prise de notes en cours" >
+                    <font>
+                        <Font size="50.0" />
+                    </font>
+                </Label>
+                <VBox fx:id="listenotes" prefHeight="500.0" prefWidth="1000">
+                    <children>
+                        <Pane fx:id="note1" prefWidth="1400" prefHeight="120">
+                            <Label layoutY="55" text="Notes élève 1"/>
+                        </Pane>
+                        <ComboBox prefWidth="1400" prefHeight="30">
+                            <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Merci pour les notes !" />
+                              <String fx:value="Il manque la partie sur bla" />
+                            </FXCollections>
+                          </items>
+                        </ComboBox>
+                        <Pane fx:id="note2" prefWidth="1400" prefHeight="120">
+                            <Label text="Notes élève 2"/>
+                        </Pane>
+                        <ComboBox prefWidth="1400" prefHeight="30">
+                            <items>
+                            <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Très bonnes notes :)" />
+                              <String fx:value="Bla blabla bla bla" />
+                            </FXCollections>
+                          </items>
+                        </ComboBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox fx:id="pp_bas" layoutY="875" alignment="CENTER">
+            <children>
+                <Label layoutY="50" text="Mentions légales" >
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>            
+            </children>
+        </VBox>
+    </children>
 </AnchorPane>

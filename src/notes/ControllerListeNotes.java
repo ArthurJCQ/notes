@@ -16,8 +16,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -30,10 +33,15 @@ public class ControllerListeNotes implements Initializable {
 
     @FXML
     private TextField nom;
+    
     @FXML
     private PasswordField mdp;
+    
     @FXML
     private Alert alert;
+    
+    @FXML
+    private Pane comm1, comm2;
 
     @FXML
     private VBox pp_haut3 = new VBox(), pp_bas3 = new VBox();
@@ -57,7 +65,6 @@ public class ControllerListeNotes implements Initializable {
             alert.setTitle("Erreur");
             alert.setHeaderText(null);
             alert.setContentText("Mauvais paramètres de connexion");
-
             alert.showAndWait();
         }
     }

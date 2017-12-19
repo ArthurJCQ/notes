@@ -10,54 +10,73 @@
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 
-<AnchorPane id="AnchorPane3" prefHeight="900.0" prefWidth="1600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notes.ControllerListeNotes">
+<AnchorPane id="AnchorPane3" prefHeight="900.0" prefWidth="1600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notes.ControllerListeNotes">
     <stylesheets>
-        <URL value="@vue.css"/>
+        <URL value="@vue.css" />
     </stylesheets>
     <children>
         <VBox fx:id="pp_haut3" alignment="CENTER">
             <children>
-                <Label layoutY="50" text="Notes !" >
+                <Label layoutY="50" text="Notes !">
                     <font>
                         <Font name="System Bold" size="75.0" />
                     </font>
                 </Label>
-                <Label layoutY="150" text="Interface d'aide à la prise de notes en cours" >
+                <Label layoutY="150" text="Interface d'aide à la prise de notes en cours">
                     <font>
                         <Font size="50.0" />
                     </font>
                 </Label>
-                <VBox fx:id="listenotes" prefHeight="500.0" minWidth="1400" maxWidth="1400">
+                <VBox fx:id="listenotes" maxWidth="1400" minWidth="1400" prefHeight="500.0">
                     <children>
-                        <Pane fx:id="note1" prefWidth="1400" prefHeight="120">
-                            <Label layoutY="55" layoutX="50" text="Notes élève 1"/>
+                        <Pane fx:id="note1" prefHeight="90" prefWidth="1400">
+                           <children>
+                               <Label layoutX="50" layoutY="35" text="Notes élève 1" />
+                           </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                         </Pane>
-                        <ComboBox prefWidth="1400" prefHeight="30">
-                            <items>
-                            <FXCollections fx:factory="observableArrayList">
-                              <String fx:value="Merci pour les notes !" />
-                              <String fx:value="Il manque la partie sur bla" />
-                            </FXCollections>
-                          </items>
-                        </ComboBox>
-                        <Pane fx:id="note2" prefWidth="1400" prefHeight="120">
-                            <Label layoutY="55" layoutX="50" text="Notes élève 2"/>
+                  <Pane fx:id="note11" prefHeight="30.0" prefWidth="1400" style="-fx-background-color: #f0f0f0;">
+                     <children>
+                        <Label layoutX="650.0" layoutY="4.0" text="Commentaires" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Pane>
+                        <Pane fx:id="note2" prefHeight="90" prefWidth="1400">
+                           <children>
+                               <Label layoutX="50" layoutY="35" text="Notes élève 2" />
+                           </children>
                         </Pane>
-                        <ComboBox prefWidth="1400" prefHeight="30">
-                            <items>
-                            <FXCollections fx:factory="observableArrayList">
-                              <String fx:value="Très bonnes notes :)" />
-                              <String fx:value="Bla blabla bla bla" />
-                            </FXCollections>
-                          </items>
-                        </ComboBox>
+                  <Pane fx:id="note111" prefHeight="30.0" prefWidth="1400" style="-fx-background-color: #f0f0f0;">
+                     <children>
+                        <Label layoutX="650.0" layoutY="4.0" text="Commentaires" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Pane>
+                  <Pane id="comm1" fx:id="note12" prefHeight="90" prefWidth="1400" style="-fx-background-color: #ffddaa;">
+                     <children>
+                        <Label layoutX="50.0" layoutY="14.0" text="Merci pour tes notes !" />
+                        <Label layoutX="50.0" layoutY="45.0" text="Il manque la partie sur bla.." />
+                     </children>
+                  </Pane>
+                  <Pane id="comm2" fx:id="note121" prefHeight="90" prefWidth="1400" style="-fx-background-color: #ffddaa;">
+                     <children>
+                        <Label layoutX="50.0" layoutY="14.0" text="Très bonnes notes :)" />
+                        <Label layoutX="50.0" layoutY="45.0" text="Bla blabli bla blo" />
+                     </children>
+                  </Pane>
                     </children>
                 </VBox>         
             </children>
         </VBox>
-        <VBox fx:id="pp_bas3" layoutY="875" alignment="CENTER">
+        <VBox fx:id="pp_bas3" alignment="CENTER" layoutY="875">
             <children>
-                <Label layoutY="50" text="Mentions légales" >
+                <Label layoutY="50" text="Mentions légales">
                     <font>
                         <Font size="15.0" />
                     </font>

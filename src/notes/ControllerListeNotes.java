@@ -26,7 +26,7 @@ import javafx.stage.Stage;
  *
  * @author ArthurJCQ
  */
-public class ControllerConnexion implements Initializable {
+public class ControllerListeNotes implements Initializable {
 
     @FXML
     private TextField nom;

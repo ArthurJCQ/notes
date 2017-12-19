@@ -27,47 +27,45 @@
                         <Font size="50.0" />
                     </font>
                 </Label>
-                <VBox fx:id="listenotes" maxWidth="1400" minWidth="1400" prefHeight="500.0">
+                <VBox fx:id="listenotes" maxWidth="1000" minWidth="1000" prefHeight="500.0">
                     <children>
-                        <Pane fx:id="note1" prefHeight="90" prefWidth="1400">
+                        <Pane fx:id="note1" prefHeight="90" prefWidth="1000" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-color: #ffffb7;">
                            <children>
-                               <Label layoutX="50" layoutY="35" text="Notes élève 1" />
+                               <Label layoutX="100.0" layoutY="35" text="Notes élève 1">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Label>
+                        <CheckBox layoutX="700.0" layoutY="35.0" mnemonicParsing="false" text="Mode écriture" />
+                        <Button layoutX="875.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Accéder" />
                            </children>
-                     <VBox.margin>
+                     <opaqueInsets>
                         <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
                      </VBox.margin>
                         </Pane>
-                  <Pane fx:id="note11" prefHeight="30.0" prefWidth="1400" style="-fx-background-color: #f0f0f0;">
+                  <Pane fx:id="note11" prefHeight="90" prefWidth="1000" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-color: #ffffb7;">
                      <children>
-                        <Label layoutX="650.0" layoutY="4.0" text="Commentaires" />
+                        <Label layoutX="100.0" layoutY="35.0" text="Notes élève 2">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Label>
+                        <CheckBox layoutX="700.0" layoutY="35.0" mnemonicParsing="false" text="Mode écriture" />
+                        <Button layoutX="875.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Accéder" />
                      </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
                   </Pane>
-                        <Pane fx:id="note2" prefHeight="90" prefWidth="1400">
-                           <children>
-                               <Label layoutX="50" layoutY="35" text="Notes élève 2" />
-                           </children>
-                        </Pane>
-                  <Pane fx:id="note111" prefHeight="30.0" prefWidth="1400" style="-fx-background-color: #f0f0f0;">
+                  <Pane fx:id="note12" prefHeight="90" prefWidth="1000" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-color: #ffffb7;">
                      <children>
-                        <Label layoutX="650.0" layoutY="4.0" text="Commentaires" />
-                     </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                  </Pane>
-                  <Pane id="comm1" fx:id="note12" prefHeight="90" prefWidth="1400" style="-fx-background-color: #ffddaa;">
-                     <children>
-                        <Label layoutX="50.0" layoutY="14.0" text="Merci pour tes notes !" />
-                        <Label layoutX="50.0" layoutY="45.0" text="Il manque la partie sur bla.." />
-                     </children>
-                  </Pane>
-                  <Pane id="comm2" fx:id="note121" prefHeight="90" prefWidth="1400" style="-fx-background-color: #ffddaa;">
-                     <children>
-                        <Label layoutX="50.0" layoutY="14.0" text="Très bonnes notes :)" />
-                        <Label layoutX="50.0" layoutY="45.0" text="Bla blabli bla blo" />
+                        <Label layoutX="100.0" layoutY="35" text="Notes élève 3">
+                           <font>
+                              <Font size="20.0" />
+                           </font></Label>
+                        <Button layoutX="875.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Accéder" />
+                        <CheckBox layoutX="700.0" layoutY="35.0" mnemonicParsing="false" text="Mode écriture" />
                      </children>
                   </Pane>
                     </children>

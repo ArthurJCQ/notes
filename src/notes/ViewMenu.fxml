@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -9,33 +10,33 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane2" prefHeight="900.0" prefWidth="1600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notes.ControllerMenu">
+<AnchorPane id="AnchorPane2" prefHeight="900.0" prefWidth="1600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="notes.ControllerMenu">
     <stylesheets>
-        <URL value="@vue.css"/>
+        <URL value="@vue.css" />
     </stylesheets>
     <children>
-        <VBox fx:id="p2_haut" alignment="CENTER">
+        <VBox fx:id="p2_haut" alignment="CENTER" stylesheets="@vue.css">
             <children>
-                <Label fx:id="titre" text="Notes !" >
+                <Label fx:id="titre" text="Notes !">
                     <font>
                         <Font name="System Bold" size="75.0" />
                     </font>
                 </Label>
-                <Label fx:id="soustitre" text="Interface d'aide à la prise de notes en cours" >
+                <Label fx:id="soustitre" text="Interface d'aide à la prise de notes en cours">
                     <font>
                         <Font size="50.0" />
                     </font>
                 </Label>
             </children>
         </VBox>
-        <VBox fx:id="p2_milieu" layoutY="200" alignment="CENTER">
+        <VBox fx:id="p2_milieu" alignment="CENTER" layoutY="200">
             <children>
                 <Label fx:id="matiere" text="Choix de la matière">
                     <font>
                         <Font name="System Bold" size="20" />
                     </font>                    
                 </Label>             
-                <ComboBox fx:id="listematieres">
+                <ComboBox fx:id="listematieres" minWidth="150.0" prefWidth="150.0" promptText="Matière">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Matière 1" />
@@ -43,13 +44,17 @@
                       <String fx:value="Matière 3" />
                     </FXCollections>
                   </items>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
                 </ComboBox>   
                 <Label fx:id="seance" text="Choix de la séance">
                     <font>
                         <Font name="System Bold" size="20" />
                     </font>                    
-                </Label>                  
-                <ComboBox fx:id="listeseances">
+                </Label>
+            <DatePicker prefWidth="150.0" />                  
+                <ComboBox fx:id="listeseances" minWidth="150.0" prefWidth="150.0" promptText="Matière">
                   <items>
                     <FXCollections fx:factory="observableArrayList">
                       <String fx:value="Séance 1" />
@@ -57,13 +62,16 @@
                       <String fx:value="Séance 3" />
                     </FXCollections>
                   </items>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
                 </ComboBox> 
                 <Button fx:id="boutonacces"> Go ! </Button>            
             </children>
         </VBox>
-        <VBox fx:id="pp_bas" layoutY="875" alignment="CENTER">
+        <VBox fx:id="pp_bas" alignment="CENTER" layoutY="875">
             <children>
-                <Label text="Mentions légales" >
+                <Label text="Mentions légales">
                     <font>
                         <Font size="15.0" />
                     </font>

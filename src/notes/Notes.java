@@ -28,6 +28,7 @@ public class Notes extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("ViewConnexion.fxml"));
         primaryStage.setTitle("Notes !");
         primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

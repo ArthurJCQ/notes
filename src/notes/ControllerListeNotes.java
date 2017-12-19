@@ -36,20 +36,16 @@ public class ControllerListeNotes implements Initializable {
     private Alert alert;
 
     @FXML
-    private VBox pp_haut = new VBox(), pp_milieu = new VBox(), pp_connexion = new VBox(), pp_bas = new VBox();
+    private VBox pp_haut3 = new VBox(), pp_bas3 = new VBox();
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        pp_haut.setPrefSize(1600, 875);
-        pp_milieu.setPrefSize(1600, 675);
-        pp_bas.setStyle("-fx-background-color: #cccccc;");
-        pp_bas.setPrefSize(1600, 25);
-        pp_connexion.setStyle("-fx-border-color: black;-fx-border-width: 2;-fx-border-radius: 15;");
-        pp_connexion.setMaxSize(300.0, 300.0);
-        pp_connexion.setMinSize(300.0, 300.0);
+        pp_haut3.setPrefSize(1600, 875);
+        pp_bas3.setStyle("-fx-background-color: #cccccc;");
+        pp_bas3.setPrefSize(1600, 25);
     }
 
     @FXML

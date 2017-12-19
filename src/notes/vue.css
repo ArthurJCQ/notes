@@ -47,8 +47,8 @@
     -fx-background-radius: 10;
 }
 
-#AnchorPane3{
-    -fx-background-image: url("fond_accueil.jpg");
+#pp_haut3{
+    -fx-background-image: url("fond_notes.jpg");
 }
 
 #note1{

@@ -15,22 +15,22 @@
         <URL value="@vue.css"/>
     </stylesheets>
     <children>
-        <VBox alignment="CENTER">
+        <VBox fx:id="pp_haut3" alignment="CENTER">
             <children>
-                <Label fx:id="titre" layoutY="50" text="Notes !" >
+                <Label layoutY="50" text="Notes !" >
                     <font>
                         <Font name="System Bold" size="75.0" />
                     </font>
                 </Label>
-                <Label fx:id="soustitre" layoutY="150" text="Interface d'aide à la prise de notes en cours" >
+                <Label layoutY="150" text="Interface d'aide à la prise de notes en cours" >
                     <font>
                         <Font size="50.0" />
                     </font>
                 </Label>
-                <VBox fx:id="listenotes" prefHeight="500.0" prefWidth="1000">
+                <VBox fx:id="listenotes" prefHeight="500.0" minWidth="1400" maxWidth="1400">
                     <children>
                         <Pane fx:id="note1" prefWidth="1400" prefHeight="120">
-                            <Label layoutY="55" text="Notes élève 1"/>
+                            <Label layoutY="55" layoutX="50" text="Notes élève 1"/>
                         </Pane>
                         <ComboBox prefWidth="1400" prefHeight="30">
                             <items>
@@ -41,7 +41,7 @@
                           </items>
                         </ComboBox>
                         <Pane fx:id="note2" prefWidth="1400" prefHeight="120">
-                            <Label text="Notes élève 2"/>
+                            <Label layoutY="55" layoutX="50" text="Notes élève 2"/>
                         </Pane>
                         <ComboBox prefWidth="1400" prefHeight="30">
                             <items>
@@ -52,10 +52,10 @@
                           </items>
                         </ComboBox>
                     </children>
-                </VBox>
+                </VBox>         
             </children>
         </VBox>
-        <VBox fx:id="pp_bas" layoutY="875" alignment="CENTER">
+        <VBox fx:id="pp_bas3" layoutY="875" alignment="CENTER">
             <children>
                 <Label layoutY="50" text="Mentions légales" >
                     <font>

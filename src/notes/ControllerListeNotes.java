@@ -16,8 +16,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -30,26 +33,27 @@ public class ControllerListeNotes implements Initializable {
 
     @FXML
     private TextField nom;
+    
     @FXML
     private PasswordField mdp;
+    
     @FXML
     private Alert alert;
+    
+    @FXML
+    private Pane comm1, comm2;
 
     @FXML
-    private VBox pp_haut = new VBox(), pp_milieu = new VBox(), pp_connexion = new VBox(), pp_bas = new VBox();
+    private VBox pp_haut3 = new VBox(), pp_bas3 = new VBox();
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        pp_haut.setPrefSize(1600, 875);
-        pp_milieu.setPrefSize(1600, 675);
-        pp_bas.setStyle("-fx-background-color: #cccccc;");
-        pp_bas.setPrefSize(1600, 25);
-        pp_connexion.setStyle("-fx-border-color: black;-fx-border-width: 2;-fx-border-radius: 15;");
-        pp_connexion.setMaxSize(300.0, 300.0);
-        pp_connexion.setMinSize(300.0, 300.0);
+        pp_haut3.setPrefSize(1600, 875);
+        pp_bas3.setStyle("-fx-background-color: #cccccc;");
+        pp_bas3.setPrefSize(1600, 25);
     }
 
     @FXML
@@ -61,7 +65,6 @@ public class ControllerListeNotes implements Initializable {
             alert.setTitle("Erreur");
             alert.setHeaderText(null);
             alert.setContentText("Mauvais paramètres de connexion");
-
             alert.showAndWait();
         }
     }

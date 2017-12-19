@@ -26,7 +26,7 @@ import javafx.scene.layout.VBox;
  *
  * @author ArthurJCQ
  */
-public class Controller2 implements Initializable {
+public class ControllerMenu implements Initializable {
     
     @FXML
     private VBox pp_bas = new VBox();

@@ -26,7 +26,7 @@ import javafx.stage.Stage;
  *
  * @author ArthurJCQ
  */
-public class Controller implements Initializable {
+public class ControllerConnexion implements Initializable {
 
     @FXML
     private TextField nom;
@@ -69,7 +69,7 @@ public class Controller implements Initializable {
     @FXML
     private void changeScene(Event event) throws Exception {
 
-        Parent blah = FXMLLoader.load(getClass().getResource("Vue2.fxml"));
+        Parent blah = FXMLLoader.load(getClass().getResource("ViewMenu.fxml"));
         Scene scene = new Scene(blah);
         Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         appStage.setScene(scene);

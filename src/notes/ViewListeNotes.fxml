@@ -35,7 +35,7 @@
                            <font>
                               <Font size="20.0" />
                            </font></Label>
-                        <CheckBox layoutX="700.0" layoutY="35.0" mnemonicParsing="false" text="Mode écriture" />
+                        <CheckBox fx:id="writeMod" layoutX="700.0" layoutY="35.0" mnemonicParsing="false" text="Mode écriture" />
                         <Button layoutX="875.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Accéder" />
                            </children>
                      <opaqueInsets>

@@ -16,10 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.CheckBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -32,10 +29,7 @@ import javafx.stage.Stage;
 public class ControllerListeNotes implements Initializable {
 
     @FXML
-    private TextField nom;
-    
-    @FXML
-    private PasswordField mdp;
+    private CheckBox writeMod;
     
     @FXML
     private Alert alert;
@@ -57,22 +51,18 @@ public class ControllerListeNotes implements Initializable {
     }
 
     @FXML
-    public void goToMenu(ActionEvent actionevent) throws Exception {
-        if (Model.tryLogin(nom.getText(), mdp.getText())) {
-            changeScene(actionevent);
+    public void goToNote(ActionEvent actionevent) throws Exception {
+        if (writeMod.isSelected()) {
+            changeScene(actionevent, "ViewPriseNotes");
         } else {
-            alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Erreur");
-            alert.setHeaderText(null);
-            alert.setContentText("Mauvais paramètres de connexion");
-            alert.showAndWait();
+            changeScene(actionevent, "ViewLireNotes");
         }
     }
 
     @FXML
-    private void changeScene(Event event) throws Exception {
+    private void changeScene(Event event, String page) throws Exception {
 
-        Parent blah = FXMLLoader.load(getClass().getResource("ViewMenu.fxml"));
+        Parent blah = FXMLLoader.load(getClass().getResource(page));
         Scene scene = new Scene(blah);
         Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         appStage.setScene(scene);

@@ -25,6 +25,8 @@ public class Notes extends Application {
 
         //Scene scene = new Scene(root, 1000, 650);
         
+        //bla
+        
         Parent root = FXMLLoader.load(getClass().getResource("ViewListeNotes.fxml"));
         primaryStage.setTitle("Notes !");
         primaryStage.setScene(new Scene(root));

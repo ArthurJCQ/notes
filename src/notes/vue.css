@@ -66,3 +66,7 @@
     -fx-background-color: ffffff;
     -fx-background-radius: 15;
 }
+
+#note{
+    -fx-background-image: url("fond_prisenotes.jpg"); 
+}

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.geometry.*?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notes.ControllerPriseNotes" >
+<VBox prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="notes.ControllerPriseNotes">
   <children>
       <MenuBar>
         <menus>
@@ -31,32 +32,46 @@
       <items>
         <AnchorPane>
           <children>
+                  <BorderPane disable="true" layoutX="7.0" layoutY="21.0" opacity="0.2" prefHeight="581.0" prefWidth="382.0" style="-fx-border-style: solid; -fx-border-radius: 15;" />
                   <Label alignment="CENTER" layoutX="75.0" layoutY="27.0" prefHeight="25.0" prefWidth="231.0" text="Outils">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="93.0" layoutY="115.0" text="Schéma ou Photos">
+                  <Label layoutX="75.0" layoutY="106.0" text="Ajouter une photo ou un lien externe" textFill="#00000069" textOverrun="CENTER_ELLIPSIS">
                      <font>
-                        <Font size="15.0" />
+                        <Font name="System Italic" size="15.0" />
                      </font></Label>
-                  <Button layoutX="28.0" layoutY="161.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="343.0" text="Ajouter" />
-                  <Label layoutX="14.0" layoutY="340.0" prefHeight="15.0" prefWidth="367.0" text="Supports de cours :">
-                     <font>
-                        <Font size="15.0" />
-                     </font></Label>
-                  <CheckBox layoutX="43.0" layoutY="403.0" mnemonicParsing="false" text="Partager">
-                     <font>
-                        <Font size="14.0" />
-                     </font></CheckBox>
-                  <Button layoutX="30.0" layoutY="224.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="343.0" text="Ajouter lien externe" />
+                  <Button layoutX="19.0" layoutY="311.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="358.0" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Ajouter" />
+                  <Label layoutX="35.0" layoutY="246.0" text="Lien externe :" />
+                  <TextField layoutX="144.0" layoutY="244.0" prefHeight="31.0" prefWidth="224.0" style="-fx-background-radius: 15;" />
+                  <Label layoutX="189.0" layoutY="208.0" text="ou" />
+                  <Button layoutX="238.0" layoutY="168.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="124.0" text="Parcourir" />
+                  <Label layoutX="43.0" layoutY="173.0" text="Maphoto.jpeg" />
+                  <Pane fx:id="fb" layoutX="66.0" layoutY="472.0" prefHeight="26.0" prefWidth="27.0" style="-fx-background-image: url(&quot;fond_notes.jpg&quot;);" />
+                  <ImageView layoutX="107.0" layoutY="437.0">
+                     <image>
+                        <Image url="@facebook.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="164.0" layoutY="437.0">
+                     <image>
+                        <Image url="@twitter.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="164.0" layoutY="387.0" text="Partager" />
+                  <ImageView layoutX="222.0" layoutY="437.0">
+                     <image>
+                        <Image url="@email.png" />
+                     </image>
+                  </ImageView>
           </children>
         </AnchorPane>
         <ScrollPane prefHeight="900.0" prefWidth="1600.0">
           <content>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0" style="-fx-background-image: url;">
               <children>
-                        <TextArea layoutX="-1.0" layoutY="3.0" prefHeight="841.0" prefWidth="1194.0" text="Prendre notes" />
+                        <TextArea id="note" layoutX="-1.0" layoutY="3.0" prefHeight="841.0" prefWidth="1194.0" text="Prendre notes" />
               </children>
             </AnchorPane>
           </content>

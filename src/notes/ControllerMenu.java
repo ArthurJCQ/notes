@@ -12,13 +12,19 @@ import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 
 /**
@@ -61,5 +67,20 @@ public class ControllerMenu implements Initializable {
         
         listeseances.setPrefSize(150, 40);
     }    
+    
+    @FXML
+    public void goToPriseNotes(javafx.event.ActionEvent actionevent) throws Exception {
+        changeScene(actionevent);
+    }
+    
+    @FXML
+    private void changeScene(Event event) throws Exception {
+
+        Parent rootM = FXMLLoader.load(getClass().getResource("ViewPriseNotes.fxml"));
+        Scene scene = new Scene(rootM);
+        Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        appStage.setScene(scene);
+        appStage.show();
+    }
     
 }

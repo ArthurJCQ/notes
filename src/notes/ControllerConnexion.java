@@ -55,8 +55,7 @@ public class ControllerConnexion implements Initializable {
     @FXML
     public void goToMenu(ActionEvent actionevent) throws Exception {
         if (Model.tryLogin(nom.getText(), mdp.getText())) {
-            Etudiant etu = new Etudiant(nom.getText());
-            changeScene(actionevent);
+            changeScene(actionevent, "ViewMenu.fxml");
         } else {
             alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Erreur");
@@ -66,11 +65,13 @@ public class ControllerConnexion implements Initializable {
             alert.showAndWait();
         }
     }
+    
+    
 
     @FXML
-    private void changeScene(Event event) throws Exception {
+    private void changeScene(Event event, String page) throws Exception {
 
-        Parent blah = FXMLLoader.load(getClass().getResource("ViewMenu.fxml"));
+        Parent blah = FXMLLoader.load(getClass().getResource(page));
         Scene scene = new Scene(blah);
         Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         appStage.setScene(scene);

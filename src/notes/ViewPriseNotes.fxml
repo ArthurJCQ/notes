@@ -22,8 +22,8 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Pages">
             <items>
-              <MenuItem fx:id="miPlan" mnemonicParsing="false" onAction="#ToPlan" text="Saisir Plan" />
-                  <MenuItem mnemonicParsing="false" onAction="#enregistrerNotes" text="Enregistrer" />
+              <MenuItem fx:id="miPlan" mnemonicParsing="false" text="Saisir Plan" />
+                  <MenuItem mnemonicParsing="false" onAction="#enregistrerNote" text="Enregistrer" />
             </items>
           </Menu>
         </menus>
@@ -47,6 +47,7 @@
                   <TextField layoutX="144.0" layoutY="244.0" prefHeight="31.0" prefWidth="224.0" style="-fx-background-radius: 15;" />
                   <Label layoutX="189.0" layoutY="208.0" text="ou" />
                   <Button layoutX="238.0" layoutY="168.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="124.0" text="Parcourir" />
+                  <!--<Button fx:id="save" text="enregistrer" onAction="#enregistrerNote" />-->
                   <Label layoutX="43.0" layoutY="173.0" text="Maphoto.jpeg" />
                   <Pane fx:id="fb" layoutX="66.0" layoutY="472.0" prefHeight="26.0" prefWidth="27.0" style="-fx-background-image: url(&quot;fond_notes.jpg&quot;);" />
                   <ImageView layoutX="107.0" layoutY="437.0">
@@ -71,7 +72,7 @@
           <content>
             <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0" style="-fx-background-image: url;">
               <children>
-                        <TextArea id="note" layoutX="-1.0" layoutY="3.0" prefHeight="841.0" prefWidth="1194.0" text="Prendre notes" />
+                        <TextArea fx:id="note" layoutX="-1.0" layoutY="3.0" prefHeight="841.0" prefWidth="1194.0"/>
               </children>
             </AnchorPane>
           </content>

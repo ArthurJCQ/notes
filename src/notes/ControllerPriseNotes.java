@@ -6,7 +6,10 @@
 package notes;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -16,9 +19,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -31,8 +35,12 @@ public class ControllerPriseNotes implements Initializable {
 
     @FXML
     private Alert alert;
+
     @FXML
-    private TextField nom;
+    private TextArea note;
+    
+    @FXML
+    private Button save;
 
     @FXML
     private PasswordField mdp;
@@ -63,6 +71,13 @@ public class ControllerPriseNotes implements Initializable {
         pp_haut3.setPrefSize(1600, 875);
         pp_bas3.setStyle("-fx-background-color: #cccccc;");
         pp_bas3.setPrefSize(1600, 25);
+        try {
+            note.setText(Model.searchNote(1));
+        } catch (SQLException ex) {
+            Logger.getLogger(ControllerPriseNotes.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ControllerPriseNotes.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /* @Override
@@ -87,15 +102,6 @@ public class ControllerPriseNotes implements Initializable {
     }
 
     @FXML
-    public void ToPlan(javafx.event.ActionEvent actionevent) throws Exception {
-        if (actionevent.getSource() == miPlan) {
-
-            String pagePlan = "ViewPlan.fxml";
-            changeScene(actionevent, pagePlan);
-        }
-    }
-
-    @FXML
     public void ToListeNotes(javafx.event.ActionEvent actionevent) throws Exception {
         if (actionevent.getSource() == miListeNotes) {
 
@@ -114,12 +120,22 @@ public class ControllerPriseNotes implements Initializable {
         appStage.show();
     }
 
-    public void enregistrerNotes(ActionEvent actionevent) throws Exception {
-        alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Enregistrement");
-        alert.setHeaderText(null);
-        alert.setContentText("Votre document a bien été enregistré");
-        alert.showAndWait();
+    @FXML
+    public void enregistrerNote(ActionEvent actionevent) throws Exception {
+
+        String text = note.getText();
+        
+        try{ 
+            Model.updateNote(1, text);
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Enregistrement");
+            alert.setHeaderText(null);
+            alert.setContentText("Votre note a bien été enregistrée");
+            alert.showAndWait();
+        }
+        catch(Exception e){
+            System.out.println("Erreur : " + e);
+        }
     }
 
 }

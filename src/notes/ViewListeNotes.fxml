@@ -36,7 +36,7 @@
                               <Font size="20.0" />
                            </font></Label>
                         <CheckBox fx:id="writeMod" layoutX="700.0" layoutY="35.0" mnemonicParsing="false" text="Mode écriture" />
-                        <Button onAction="goToNote" layoutX="875.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Accéder" />
+                        <Button onAction="#goToNote" layoutX="875.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Accéder" />
                            </children>
                      <opaqueInsets>
                         <Insets />
@@ -52,7 +52,7 @@
                               <Font size="20.0" />
                            </font></Label>
                         <CheckBox layoutX="700.0" layoutY="35.0" mnemonicParsing="false" text="Mode écriture" />
-                        <Button onAction="goToNote" layoutX="875.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Accéder" />
+                        <Button onAction="#goToNote" layoutX="875.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Accéder" />
                      </children>
                      <VBox.margin>
                         <Insets bottom="5.0" />
@@ -64,7 +64,7 @@
                            <font>
                               <Font size="20.0" />
                            </font></Label>
-                        <Button onAction="goToNote" layoutX="875.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Accéder" />
+                        <Button onAction="#goToNote" layoutX="875.0" layoutY="30.0" mnemonicParsing="false" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Accéder" />
                         <CheckBox layoutX="700.0" layoutY="35.0" mnemonicParsing="false" text="Mode écriture" />
                      </children>
                   </Pane>

@@ -5,14 +5,9 @@
  */
 package notes;
 
-import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.Event;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -44,7 +39,7 @@ public class ControllerMenu implements Initializable {
     private ComboBox<String> listematieres, listeseances;
         
     @FXML
-    private Button boutonacces = new Button();
+    private Button goListe = new Button();
     
     @FXML
     private Label matiere = new Label(), seance = new Label();
@@ -69,14 +64,16 @@ public class ControllerMenu implements Initializable {
     }    
     
     @FXML
-    public void goToPriseNotes(javafx.event.ActionEvent actionevent) throws Exception {
-        changeScene(actionevent);
+    public void goToListe(ActionEvent actionevent) throws Exception {
+        {
+            changeScene(actionevent, "ViewListeNotes.fxml");
+        }
     }
     
     @FXML
-    private void changeScene(Event event) throws Exception {
+    private void changeScene(ActionEvent event, String page) throws Exception {
 
-        Parent rootM = FXMLLoader.load(getClass().getResource("ViewListeNotes.fxml"));
+        Parent rootM = FXMLLoader.load(getClass().getResource(page));
         Scene scene = new Scene(rootM);
         Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         appStage.setScene(scene);

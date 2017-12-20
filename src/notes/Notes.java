@@ -17,6 +17,7 @@ import util.DBUtil;
  * @author ArthurJCQ & Armand BEGUE
  */
 public class Notes extends Application {
+    
 
     @Override
     public void start(Stage primaryStage) throws Exception {

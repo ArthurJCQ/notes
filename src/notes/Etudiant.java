@@ -14,7 +14,7 @@ import javafx.beans.property.*;
 
 public class Etudiant {
     
-    private IntegerProperty etudiant_id;
+    private int etudiant_id;
     private StringProperty first_name;
     private String last_name;
     private StringProperty mdp;
@@ -25,15 +25,11 @@ public class Etudiant {
 
     //employee_id
     public int getEtudiantId() {
-        return etudiant_id.get();
+        return etudiant_id;
     }
 
     public void setEtudiantId(int etudiantId){
-        this.etudiant_id.set(etudiantId);
-    }
-
-    public IntegerProperty EtudiantIdProperty(){
-        return etudiant_id;
+        etudiant_id = etudiantId;
     }
 
     //first_name

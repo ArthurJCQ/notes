@@ -16,14 +16,11 @@ public class Etudiant {
     
     private IntegerProperty etudiant_id;
     private StringProperty first_name;
-    private StringProperty last_name;
+    private String last_name;
     private StringProperty mdp;
 
-    public Etudiant() {
-        this.etudiant_id = new SimpleIntegerProperty();
-        this.first_name = new SimpleStringProperty();
-        this.last_name = new SimpleStringProperty();
-        this.mdp = new SimpleStringProperty();
+    public Etudiant(String lastName) {
+        this.last_name = lastName;
     }
 
     //employee_id
@@ -54,16 +51,13 @@ public class Etudiant {
 
     //last_name
     public String getLastName () {
-        return last_name.get();
+        return last_name;
     }
 
     public void setLastName(String lastName){
-        this.last_name.set(lastName);
+        this.last_name = lastName;
     }
 
-    public StringProperty lastNameProperty() {
-        return last_name;
-    }
     
     public void setMdp(String mdp){
         this.mdp.set(mdp);

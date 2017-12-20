@@ -55,6 +55,7 @@ public class ControllerConnexion implements Initializable {
     @FXML
     public void goToMenu(ActionEvent actionevent) throws Exception {
         if (Model.tryLogin(nom.getText(), mdp.getText())) {
+            Etudiant etu = new Etudiant(nom.getText());
             changeScene(actionevent);
         } else {
             alert = new Alert(Alert.AlertType.INFORMATION);

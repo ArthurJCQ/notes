@@ -31,7 +31,7 @@
                     <children>
                         <Pane fx:id="note1" prefHeight="90" prefWidth="1000" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-color: #ffffb7;">
                            <children>
-                               <Label layoutX="100.0" layoutY="35" text="Notes élève 1">
+                               <Label layoutX="100.0" layoutY="35" text="Begue">
                            <font>
                               <Font size="20.0" />
                            </font></Label>
@@ -47,7 +47,7 @@
                         </Pane>
                   <Pane fx:id="note11" prefHeight="90" prefWidth="1000" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-color: #ffffb7;">
                      <children>
-                        <Label layoutX="100.0" layoutY="35.0" text="Notes élève 2">
+                        <Label layoutX="100.0" layoutY="35.0" text="Jacquemin">
                            <font>
                               <Font size="20.0" />
                            </font></Label>
@@ -60,7 +60,7 @@
                   </Pane>
                   <Pane fx:id="note12" prefHeight="90" prefWidth="1000" style="-fx-border-color: black; -fx-border-radius: 15; -fx-background-color: #ffffb7;">
                      <children>
-                        <Label layoutX="100.0" layoutY="35" text="Notes élève 3">
+                        <Label layoutX="100.0" layoutY="35" text="Mbape">
                            <font>
                               <Font size="20.0" />
                            </font></Label>

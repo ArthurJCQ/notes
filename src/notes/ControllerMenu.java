@@ -76,7 +76,7 @@ public class ControllerMenu implements Initializable {
     @FXML
     private void changeScene(Event event) throws Exception {
 
-        Parent rootM = FXMLLoader.load(getClass().getResource("ViewPriseNotes.fxml"));
+        Parent rootM = FXMLLoader.load(getClass().getResource("ViewListeNotes.fxml"));
         Scene scene = new Scene(rootM);
         Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         appStage.setScene(scene);

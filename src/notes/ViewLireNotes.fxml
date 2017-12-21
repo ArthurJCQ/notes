@@ -15,23 +15,12 @@
    <children>
       <VBox prefHeight="900.0" prefWidth="1614.0">
          <children>
-            <MenuBar>
-               <menus>
-                  <Menu mnemonicParsing="false" text="Menu">
-                     <items>
-                        <MenuItem fx:id="miAccueil" mnemonicParsing="false" text="Page d'accueil" />
-                        <MenuItem fx:id="miListeNotes" mnemonicParsing="false" text="Liste notes" />
-                        <MenuItem fx:id="miConnexion" mnemonicParsing="false" text="Se déconnecter" />
-                     </items>
-                  </Menu>
-                  <Menu mnemonicParsing="false" text="Pages">
-                     <items>
-                        <MenuItem fx:id="miPlan" mnemonicParsing="false" text="Saisir Plan" />
-                        <MenuItem mnemonicParsing="false" text="Enregistrer" />
-                     </items>
-                  </Menu>
-               </menus>
-            </MenuBar>
+            <Pane prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #dddddd;">
+               <children>
+                  <Button layoutX="14.0" layoutY="3.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Menu" />
+                  <Button layoutX="89.0" layoutY="3.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Pages" />
+               </children>
+            </Pane>
              <Pane fx:id="barre" prefHeight="100.0" prefWidth="1700.0">
                  
              </Pane>

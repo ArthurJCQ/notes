@@ -14,7 +14,7 @@ import javafx.beans.property.*;
 
 public class Etudiant {
     
-    private int etudiant_id;
+    public static int etudiant_id = 0;
     private StringProperty first_name;
     private String last_name;
     private StringProperty mdp;

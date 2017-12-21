@@ -56,6 +56,15 @@ public class ControllerConnexion implements Initializable {
     public void goToMenu(ActionEvent actionevent) throws Exception {
         if (Model.tryLogin(nom.getText(), mdp.getText())) {
             changeScene(actionevent, "ViewMenu.fxml");
+            if ("Jacquemin".equals(nom.getText())) {
+                Etudiant.etudiant_id = 1;
+            }else if("Begue".equals(nom.getText())){
+                Etudiant.etudiant_id = 2;
+            }else if("Mbape".equals(nom.getText())){
+                Etudiant.etudiant_id = 3;
+            }
+            //System.out.println(nom.getText());
+            //System.out.println(Etudiant.etudiant_id);
         } else {
             alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Erreur");
@@ -65,8 +74,6 @@ public class ControllerConnexion implements Initializable {
             alert.showAndWait();
         }
     }
-    
-    
 
     @FXML
     private void changeScene(Event event, String page) throws Exception {

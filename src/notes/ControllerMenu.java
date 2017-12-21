@@ -61,6 +61,7 @@ public class ControllerMenu implements Initializable {
         listematieres.setPrefSize(150, 40);
         
         listeseances.setPrefSize(150, 40);
+        //System.out.println(Etudiant.etudiant_id);
     }    
     
     @FXML

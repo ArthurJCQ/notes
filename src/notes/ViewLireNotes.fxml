@@ -13,9 +13,35 @@
         <URL value="@vue.css" />
     </stylesheets>
    <children>
-      <VBox layoutX="-6.0" layoutY="-3.0" prefHeight="900.0" prefWidth="1600.0">
+      <VBox prefHeight="900.0" prefWidth="1614.0">
          <children>
-            <Pane fx:id="barre"prefHeight="100.0" prefWidth="1600.0" />
+            <MenuBar>
+               <menus>
+                  <Menu mnemonicParsing="false" text="Menu">
+                     <items>
+                        <MenuItem fx:id="miAccueil" mnemonicParsing="false" text="Page d'accueil" />
+                        <MenuItem fx:id="miListeNotes" mnemonicParsing="false" text="Liste notes" />
+                        <MenuItem fx:id="miConnexion" mnemonicParsing="false" text="Se déconnecter" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Pages">
+                     <items>
+                        <MenuItem fx:id="miPlan" mnemonicParsing="false" text="Saisir Plan" />
+                        <MenuItem mnemonicParsing="false" text="Enregistrer" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+             <Pane fx:id="barre" prefHeight="100.0" prefWidth="1700.0">
+                 
+             </Pane>
+            <HBox prefHeight="771.0" prefWidth="1614.0">
+               <children>
+                  <Pane prefHeight="762.0" prefWidth="200.0" style="-fx-background-color: #666666;" />
+                  <TextArea editable="false" prefHeight="200.0" prefWidth="1200.0" text="Page de lecture" />
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #666666;" />
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>

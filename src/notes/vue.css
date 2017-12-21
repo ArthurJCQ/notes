@@ -67,8 +67,8 @@
     -fx-background-radius: 15;
 }
 
-#fond_prisenotes{
-    -fx-background-image: url("fond_prisenotes.jpg");
+#barre{
+    -fx-background-image: url("fond_arnaque.jpg");
 }
 
 #notes{

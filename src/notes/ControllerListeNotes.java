@@ -54,8 +54,8 @@ public class ControllerListeNotes implements Initializable {
     public void goToNote(ActionEvent actionevent) throws Exception {
         if (writeMod.isSelected()) {
             changeScene(actionevent, "ViewPriseNotes.fxml");
-        } else {
-            changeScene(actionevent, "ViewListeNotes.fxml");
+        } else{
+            changeScene(actionevent, "ViewLireNotes.fxml");
         }
     }
 

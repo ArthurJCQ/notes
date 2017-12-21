@@ -17,8 +17,8 @@
          <children>
             <Pane prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #dddddd;">
                <children>
-                  <Button layoutX="14.0" layoutY="3.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Menu" />
-                  <Button layoutX="89.0" layoutY="3.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Pages" />
+                  <Button onAction="#goToMenu" layoutX="14.0" layoutY="3.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Menu" />
+                  <Button onAction="#goToListeNotes" layoutX="89.0" layoutY="3.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Pages" />
                </children>
             </Pane>
              <Pane fx:id="barre" prefHeight="100.0" prefWidth="1700.0">
@@ -27,7 +27,7 @@
             <HBox prefHeight="771.0" prefWidth="1614.0">
                <children>
                   <Pane prefHeight="762.0" prefWidth="200.0" style="-fx-background-color: #666666;" />
-                  <TextArea editable="false" prefHeight="200.0" prefWidth="1200.0" text="Page de lecture" />
+                  <TextArea fx:id="note" editable="false" prefHeight="200.0" prefWidth="1200.0" text="Page de lecture" />
                   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #666666;" />
                </children>
             </HBox>

@@ -72,7 +72,7 @@ public class ControllerPriseNotes implements Initializable {
         pp_bas3.setStyle("-fx-background-color: #cccccc;");
         pp_bas3.setPrefSize(1600, 25);
         try {
-            note.setText(Model.searchNote(1));
+            note.setText(Model.searchNote(Etudiant.etudiant_id));
         } catch (SQLException ex) {
             Logger.getLogger(ControllerPriseNotes.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {

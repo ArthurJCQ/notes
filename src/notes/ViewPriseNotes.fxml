@@ -13,8 +13,8 @@
   <children>
       <Pane prefHeight="73.0" prefWidth="1719.0" style="-fx-background-color: #dddddd;">
          <children>
-            <Button layoutX="14.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Menu" />
-            <Button layoutX="88.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Pages" />
+            <Button onAction="#goToMenu" layoutX="14.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Menu" />
+            <Button onAction="#goToListeNotes" layoutX="88.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="63.0" text="Pages" />
          </children>
       </Pane>
     <SplitPane focusTraversable="true" prefHeight="828.0" prefWidth="1719.0" VBox.vgrow="ALWAYS">

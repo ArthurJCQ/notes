@@ -15,9 +15,9 @@
         <menus>
           <Menu mnemonicParsing="false" text="Menu">
             <items>
-              <MenuItem fx:id="miAccueil" mnemonicParsing="false"  text="Page d'accueil" />
-                  <MenuItem fx:id="miListeNotes" mnemonicParsing="false" text="Liste notes" />
-                  <MenuItem fx:id="miConnexion" mnemonicParsing="false" text="Se déconnecter" />
+                  <MenuItem onAction="#goToMenu" fx:id="miAccueil" mnemonicParsing="false"  text="Page d'accueil" />
+                  <MenuItem onAction="#goToListeNotes" fx:id="miListeNotes" mnemonicParsing="false" text="Liste notes" />
+                  <MenuItem onAction="#goToConnexion" fx:id="miConnexion" mnemonicParsing="false" text="Se déconnecter" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Pages">
@@ -46,7 +46,7 @@
                   <Label layoutX="35.0" layoutY="246.0" text="Lien externe :" />
                   <TextField layoutX="144.0" layoutY="244.0" prefHeight="31.0" prefWidth="224.0" style="-fx-background-radius: 15;" />
                   <Label layoutX="189.0" layoutY="208.0" text="ou" />
-                  <Button layoutX="238.0" layoutY="168.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="124.0" text="Parcourir" />
+                  <Button onAction="#goToListeNotes" layoutX="238.0" layoutY="168.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="124.0" text="Parcourir" />
                   <Label layoutX="43.0" layoutY="173.0" text="Maphoto.jpeg" />
                   <ImageView layoutX="107.0" layoutY="437.0">
                      <image>

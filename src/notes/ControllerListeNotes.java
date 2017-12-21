@@ -30,10 +30,10 @@ public class ControllerListeNotes implements Initializable {
 
     @FXML
     private CheckBox writeMod;
-    
+
     @FXML
     private Alert alert;
-    
+
     @FXML
     private Pane comm1, comm2;
 
@@ -52,7 +52,11 @@ public class ControllerListeNotes implements Initializable {
 
     @FXML
     public void goToNote(ActionEvent actionevent) throws Exception {
-        changeScene(actionevent, "ViewPriseNotes.fxml");
+        if (writeMod.isSelected()) {
+            changeScene(actionevent, "ViewPriseNotes.fxml");
+        } else {
+            changeScene(actionevent, "ViewListeNotes.fxml");
+        }
     }
 
     @FXML

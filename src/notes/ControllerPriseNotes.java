@@ -85,29 +85,18 @@ public class ControllerPriseNotes implements Initializable {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }*/
     @FXML
-    public void ToConnexion(javafx.event.ActionEvent actionevent) throws Exception {
-        if (actionevent.getSource() == miConnexion) {
-            String pageDeconnexion = "ViewConnexion.fxml";
-            changeScene(actionevent, pageDeconnexion);
-        }
+    public void goToConnexion(ActionEvent actionevent) throws Exception {
+            changeScene(actionevent, "ViewConnexion.fxml");
     }
 
     @FXML
-    public void ToAccueil(javafx.event.ActionEvent actionevent) throws Exception {
-        if (actionevent.getSource() == miAccueil) {
-
-            String pageAccueil = "ViewMenu.fxml";
-            changeScene(actionevent, pageAccueil);
-        }
+    public void goToMenu(ActionEvent actionevent) throws Exception {
+            changeScene(actionevent, "ViewMenu.fxml");
     }
 
     @FXML
-    public void ToListeNotes(javafx.event.ActionEvent actionevent) throws Exception {
-        if (actionevent.getSource() == miListeNotes) {
-
-            String pageListeNotes = "ViewListeNotes.fxml";
-            changeScene(actionevent, pageListeNotes);
-        }
+    public void goToListeNotes(ActionEvent actionevent) throws Exception {
+            changeScene(actionevent, "ViewListeNotes.fxml");
     }
 
     @FXML

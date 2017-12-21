@@ -57,9 +57,9 @@ public class ControllerConnexion implements Initializable {
         if (Model.tryLogin(nom.getText(), mdp.getText())) {
             changeScene(actionevent, "ViewMenu.fxml");
             if ("Jacquemin".equals(nom.getText())) {
-                Etudiant.etudiant_id = 1;
-            }else if("Begue".equals(nom.getText())){
                 Etudiant.etudiant_id = 2;
+            }else if("Begue".equals(nom.getText())){
+                Etudiant.etudiant_id = 1;
             }else if("Mbape".equals(nom.getText())){
                 Etudiant.etudiant_id = 3;
             }

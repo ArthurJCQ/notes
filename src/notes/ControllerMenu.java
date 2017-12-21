@@ -72,6 +72,11 @@ public class ControllerMenu implements Initializable {
     }
     
     @FXML
+    public void goToConnexion(ActionEvent actionevent) throws Exception {
+            changeScene(actionevent, "ViewConnexion.fxml");
+    }
+    
+    @FXML
     private void changeScene(ActionEvent event, String page) throws Exception {
 
         Parent rootM = FXMLLoader.load(getClass().getResource(page));

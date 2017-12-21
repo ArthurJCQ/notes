@@ -78,5 +78,6 @@
                 </Label>            
             </children>
         </VBox>
+      <Button layoutX="1452.0" layoutY="39.0" mnemonicParsing="false" style="-fx-background-color: #ff0000; -fx-background-radius: 15;" text="Déconnexion" />
     </children>
 </AnchorPane>

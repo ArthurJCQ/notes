@@ -15,20 +15,20 @@
         <menus>
           <Menu mnemonicParsing="false" text="Menu">
             <items>
-              <MenuItem fx:id="miAccueil" mnemonicParsing="false" onAction="#ToAccueil" text="Page d'accueil" />
-                  <MenuItem fx:id="miListeNotes" mnemonicParsing="false" onAction="#ToListeNotes" text="Liste notes" />
-                  <MenuItem fx:id="miConnexion" mnemonicParsing="false" onAction="#ToConnexion" text="Se déconnecter" />
+              <MenuItem fx:id="miAccueil" mnemonicParsing="false"  text="Page d'accueil" />
+                  <MenuItem fx:id="miListeNotes" mnemonicParsing="false" text="Liste notes" />
+                  <MenuItem fx:id="miConnexion" mnemonicParsing="false" text="Se déconnecter" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Pages">
             <items>
               <MenuItem fx:id="miPlan" mnemonicParsing="false" text="Saisir Plan" />
-                  <MenuItem mnemonicParsing="false" onAction="#enregistrerNote" text="Enregistrer" />
+                  <MenuItem mnemonicParsing="false"  text="Enregistrer" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
-    <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <SplitPane focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
         <AnchorPane>
           <children>
@@ -49,7 +49,6 @@
                   <Button layoutX="238.0" layoutY="168.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="124.0" text="Parcourir" />
                   <!--<Button fx:id="save" text="enregistrer" onAction="#enregistrerNote" />-->
                   <Label layoutX="43.0" layoutY="173.0" text="Maphoto.jpeg" />
-                  <Pane fx:id="fb" layoutX="66.0" layoutY="472.0" prefHeight="26.0" prefWidth="27.0" style="-fx-background-image: url(&quot;fond_notes.jpg&quot;);" />
                   <ImageView layoutX="107.0" layoutY="437.0">
                      <image>
                         <Image url="@facebook.png" />
@@ -66,35 +65,20 @@
                         <Image url="@email.png" />
                      </image>
                   </ImageView>
+                  <TextArea layoutX="402.0" prefHeight="848.0" prefWidth="1315.0" />
+                  <Button onAction="#enregistrerNote" layoutX="111.0" layoutY="703.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="192.0" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Enregistrer" />
           </children>
         </AnchorPane>
-        <ScrollPane prefHeight="900.0" prefWidth="1600.0">
-          <content>
-            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0" style="-fx-background-image: url;">
-              <children>
-                        <TextArea fx:id="note" layoutX="-1.0" layoutY="3.0" prefHeight="841.0" prefWidth="1194.0"/>
-              </children>
-            </AnchorPane>
-          </content>
-        </ScrollPane>
       </items>
-    </SplitPane>
-    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
-      <children>
-        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Prise de Notes" HBox.hgrow="ALWAYS">
-          <font>
-            <Font size="11.0" fx:id="x3" />
-          </font>
-          <textFill>
-            <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
-          </textFill>
-        </Label>
-        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
-        <Label font="$x3" maxWidth="-1.0" textFill="$x4" HBox.hgrow="NEVER" />
-      </children>
-      <padding>
-        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
-      </padding>
-    </HBox>
+    </SplitPane>    
+    <VBox fx:id="pp_bas3" alignment="CENTER" layoutY="875">
+            <children>
+                <Label layoutY="50" text="Mentions légales">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>            
+            </children>
+        </VBox>
   </children>
 </VBox>

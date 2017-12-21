@@ -65,7 +65,7 @@
                         <Image url="@email.png" />
                      </image>
                   </ImageView>
-                  <TextArea layoutX="402.0" prefHeight="848.0" prefWidth="1315.0" />
+                  <TextArea fx:id="note" layoutX="402.0" prefHeight="848.0" prefWidth="1315.0" />
                   <Button onAction="#enregistrerNote" layoutX="111.0" layoutY="703.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="192.0" style="-fx-background-color: #99dd99; -fx-background-radius: 15;" text="Enregistrer" />
           </children>
         </AnchorPane>
